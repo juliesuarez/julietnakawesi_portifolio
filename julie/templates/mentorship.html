@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .float-card {
+        animation: floatAnimation 3s infinite ease-in-out alternate;
+    }
+    
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+    
+</style>
+    <div class="card float-card" style="width:50%; border: 2px solid purple; margin-left:200px;">
+        <section id="mentorship" class="mentorship-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 style="color:purple;">Mentorship</h2>
+                        <p>I'm proud to be a <strong style="color:purple;">mentor</strong> at Groundbreaker Talents Uganda and Refactory Academy, 
+                            where I provide guidance and insights about technology and life skills to aspiring technologists.</p>
+                        <p>Through mentorship, I aim to empower the next generation of leaders and innovators,
+                             helping them navigate through challenges and achieve their goals in the tech industry.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

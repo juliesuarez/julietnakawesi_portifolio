@@ -1,0 +1,53 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    padding: 10px; 
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: auto; /* Adjust the spacing between nav items */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #0a58ca;
+    padding: 10px; 
+    font-size: 20px;
+}
+
+.logo {
+    margin-right: auto; /* Push the logo as far left as possible */
+}
+
+.nav-item a {
+    color: white; /* Initial color */
+    background-color: transparent; /* Initial background color */
+    padding: 5px 10px; /* Add padding to make it look like a button */
+    border-radius: 5px; /* Add border radius to round the corners */
+    transition: background-color 0.9s ease, color 0.9s ease; /* Smooth transition effect */
+}
+
+.nav-item a:hover {
+    background-color:purple; 
+    color: white; 
+}
+.social-media-icons {
+    display: flex;
+    align-items: left;  
+    padding: 10px; 
+    justify-content: center;
+
+}
+.social-media-icons li {
+    margin-right: 30px; 
+    width:10px;
+}
+

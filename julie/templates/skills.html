@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .card-container {
+        display: flex;
+        justify-content: space-between; /* Align cards with space between them */
+    }
+
+    .card {
+        width: 40%;
+        border: 2px solid purple;
+        margin-bottom: 20px; /* Add margin between the cards */
+        padding: 20px; /* Add padding for content */
+    }
+
+    .animate-float {
+        animation: floatAnimation 3s infinite ease-in-out alternate;
+    }
+
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+</style>
+
+<div class="card-container">
+    <div class="card animate-float">
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h2 style="color:purple;">Technical Skills</h2>
+                        <p>Here are some of my key technical skills:</p>
+                        <ul>
+                            <li>Programming Languages: Python, JavaScript, C</li>
+                            <li>Web Development: HTML, CSS, JavaScript, Django</li>
+                            <li>Data Science, Data Analysis, Data Visualization</li>
+                            <li>Database Management: SQL</li>
+                            <li>Linux and Windows usage</li>
+                            <li>Git and GitHub</li>
+                            <li>Unit Testing</li>
+                            <li>Debugging</li>
+                            <li>Agile methodology</li>
+                            <li>Unit Testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="card animate-float">
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h2 style="color:purple;">Soft Skills</h2>
+                        <p>Here are some of my soft skills:</p>
+                        <ul>
+                            <li>Problem Solving Skills</li>
+                            <li>Communication Skills</li>
+                            <li>Documentation</li>
+                            <li>Collaboration</li>
+                            <li>Leadership skills</li>
+                            <li>Active listening skills</li>
+                            <li>Mentoring</li>
+                            <li>Critical thinking</li>
+                            <li>Adaptability</li>
+                            <li>Creativity</li>
+                            <li>Emotional Intelligence</li>
+                            <li>Conflict Resolution</li>
+                            <li>Resilience</li>
+                            <li>Research</li>
+                            <li>Time management</li>
+                            <li>Pressure management</li>
+                            <li>Languages</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br>
+{% endblock %}

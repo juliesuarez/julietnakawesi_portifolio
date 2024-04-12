@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+    .cta-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: purple;
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .cta-button:hover {
+        background-color: darkpurple;
+    }
+    </style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="home-section text-center">
+                <h1 style="color:black;">Welcome to Juliet Nakawesi's Portfolio</h1>
+                <div class="card mx-auto" id="intro-card" style="width:50%; border: 2px solid purple;">
+                    <div class="card-body" >
+                        <h5 class="card-title">Briefly</h5>
+                        <p class="card-text">Software Engineer, Data Scientist, Mentor, and Innovator</p>  
+                        <a href="{% url 'me' %}" class="cta-button">Explore More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

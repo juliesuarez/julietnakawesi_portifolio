@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3 project-card" style="border-color: purple;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: purple;">Personal Project</h5>
+                            <p class="card-text">Stock Management System</p>  
+                            <p class="card-text"><strong>Role:</strong> Developer</p>  
+                            <p class="card-text">The Personal Project is a stock management system developed using Python and Django. 
+                                It allows users to track inventory, manage stock levels, and generate reports for informed decision-making.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3 project-card" style="border-color: purple;">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: purple;">Video Conferencing</h5>
+                            <p class="card-text">Video and audio application with Agora SDK</p>
+                            <p class="card-text"><strong>Role:</strong> Developer</p>  
+                            <p class="card-text">The Video Conferencing application is built using Agora SDK for real-time video and audio communication. 
+                                It offers features like group calls, and chat functionality for seamless collaboration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3 project-card">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: purple;">Bank Of Uganda</h5>
+                            <p class="card-text">Transport Management System</p>
+                            <p class="card-text"><strong>Role:</strong> Developer and Project Manager</p>  
+                            <p class="card-text">The Transport Management System for Bank Of Uganda is a digital solution designed to streamline and automate vehicle requests and approvals within the organization. 
+                                It replaces the manual process, reducing paperwork and improving efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3 project-card">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: purple;">Mind lyfe</h5>
+                            <p class="card-text">Mental Health System</p>
+                            <p class="card-text"><strong>Role:</strong> Developer</p>  
+                            <p class="card-text">Mind Lyfe is a comprehensive mental health system that provides support and resources for individuals struggling with mental health issues. 
+                                It offers counseling services, educational materials, and community support to promote mental well-being.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br>
+    </section>
+    <br><br>
+
+    <style>
+        .project-card {
+            animation: floatAnimation 5s infinite alternate ease-in-out;
+            border: 2px solid purple; /* Add border */
+            border-radius: 10px; /* Add border radius */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Add box shadow */
+            cursor: pointer; /* Add cursor pointer */
+            transition: transform 0.3s; /* Add transition for smoother animation */
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px); /* Add hover effect */
+        }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+
+    <script>
+        // JavaScript for interactivity can be added here
+        // For example, you can add click events to the cards to display more details
+
+        // Get all project cards
+        const projectCards = document.querySelectorAll('.project-card');
+
+        // Add click event listener to each project card
+        projectCards.forEach(card => {
+            card.addEventListener('click', () => {
+                // Toggle the class to show or hide additional details
+                card.classList.toggle('show-details');
+
+                // Get the additional details element
+                const details = card.querySelector('.additional-details');
+
+                // Toggle slide-down animation
+                if (details.style.maxHeight) {
+                    details.style.maxHeight = null;
+                } else {
+                    details.style.maxHeight = details.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+{% endblock %}

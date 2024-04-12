@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="card" style="width: 50%; padding: 20px; box-sizing: border-box; margin: 50px auto; border: 2px solid purple; border-radius: 10px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); animation: floatAnimation 5s infinite alternate;">
+    <h1 style="text-align: center; color: purple;">Thank You!</h1>
+    <p style="text-align: center;">Your message has been successfully submitted.</p>
+</div>
+
+<style>
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+</style>
+{% endblock %}
