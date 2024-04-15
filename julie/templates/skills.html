@@ -27,6 +27,37 @@
             transform: translateY(-10px);
         }
     }
+
+    .skill-list {
+        list-style: none; /* Remove default list styles */
+        padding-left: 0; /* Remove default left padding */
+    }
+
+    .skill-item {
+        margin-bottom: 10px; /* Add space between skill items */
+    }
+
+    .skill-item span {
+        display: inline-block;
+        width: 120px; /* Adjust width as needed */
+        font-weight: bold;
+    }
+
+    .skill-progress {
+        display: inline-block;
+        width: calc(100% - 120px); /* Adjust width to fill remaining space */
+        background-color: #f0f0f0; /* Light gray background */
+        border-radius: 5px; /* Rounded corners */
+        height: 20px; /* Height of the progress bar */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    .skill-progress-bar {
+        background-color: purple; /* Color of the progress bar */
+        height: 100%; /* Height of the progress bar */
+    }
 </style>
 
 <div class="card-container">
@@ -37,17 +68,37 @@
                     <div class="col-md-10">
                         <h2 style="color:purple;">Technical Skills</h2>
                         <p>Here are some of my key technical skills:</p>
-                        <ul>
-                            <li>Programming Languages: Python, JavaScript, C</li>
-                            <li>Web Development: HTML, CSS, JavaScript, Django</li>
-                            <li>Data Science, Data Analysis, Data Visualization</li>
-                            <li>Database Management: SQL</li>
-                            <li>Linux and Windows usage</li>
-                            <li>Git and GitHub</li>
-                            <li>Unit Testing</li>
-                            <li>Debugging</li>
-                            <li>Agile methodology</li>
-                            <li>Unit Testing</li>
+                        <ul class="skill-list">
+                            <li class="skill-item">
+                                <span>Python:</span>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span>JavaScript:</span>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 70%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span>C:</span>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 60%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span>HTML:</span>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 85%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span>CSS:</span>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 75%;"></div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -59,27 +110,46 @@
         <section id="skills" class="skills-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10">
+                    <div class="col-md-12">
                         <h2 style="color:purple;">Soft Skills</h2>
                         <p>Here are some of my soft skills:</p>
-                        <ul>
-                            <li>Problem Solving Skills</li>
-                            <li>Communication Skills</li>
-                            <li>Documentation</li>
-                            <li>Collaboration</li>
-                            <li>Leadership skills</li>
-                            <li>Active listening skills</li>
-                            <li>Mentoring</li>
-                            <li>Critical thinking</li>
-                            <li>Adaptability</li>
-                            <li>Creativity</li>
-                            <li>Emotional Intelligence</li>
-                            <li>Conflict Resolution</li>
-                            <li>Resilience</li>
-                            <li>Research</li>
-                            <li>Time management</li>
-                            <li>Pressure management</li>
-                            <li>Languages</li>
+                        <ul class="skill-list">
+                            <li class="skill-item">
+                                <span>Problem Solving:</span>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 90%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span>Communication:</span>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 85%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span>Teamwork:</span>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span>Leadership:</span>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 75%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span>Time Management:</span>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 85%;"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <span>Pressure Management:</span>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 85%;"></div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>

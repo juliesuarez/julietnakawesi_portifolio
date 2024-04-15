@@ -38,6 +38,9 @@ def contact(request):
 def thank_you(request):
     return render(request, 'message.html')
 
+def interest(request):
+    return render(request, 'interest.html')
+
 def my_view(request):
     admin_url = reverse('admin:index')
     return redirect(admin_url)

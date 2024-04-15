@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .interests-section {
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .interest {
+        margin-bottom: 30px;
+    }
+
+    .interest img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid purple;
+    }
+
+    .interest h3 {
+        color: purple;
+        margin-top: 20px;
+    }
+
+    .interest p {
+        font-size: 18px;
+    }
+</style>
+
+<section id="interests" class="interests-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 interest">
+                <img src="{% static 'images/mentor.jpg' %}" alt="Mentorship">
+                <h3>Mentoring</h3>
+                <p>I am passionate about mentoring other people and helping them grow personally and professionally.</p>
+            </div>
+            <div class="col-md-3 interest">
+                <img src="{% static 'images/innovation.jpg' %}" alt="Innovative Ideas">
+                <h3>Innovative Ideas</h3>
+                <p>I love exploring innovative ideas and finding creative solutions to problems.</p>
+            </div>
+            <div class="col-md-3 interest">
+                <img src="{% static 'images/travel.jpg' %}" alt="Travelling">
+                <h3>Travelling</h3>
+                <p>Travelling allows me to explore new cultures, meet new people, and broaden my horizons.</p>
+            </div>
+            <div class="col-md-3 interest">
+                <img src="{% static 'images/ismail2.jpeg' %}" alt="Sports">
+                <h3>Sports</h3>
+                <p>I enjoy staying active and participating in various sports activities to keep myself fit and healthy.</p>
+            </div>
+            <div class="col-md-3 interest">
+                <img src="{% static 'images/animal.jpg' %}" alt="Loving Animals and Nature">
+                <h3>Loving Animals and Nature</h3>
+                <p>I have a deep appreciation for animals and nature, and I love spending time outdoors exploring and connecting with the natural world.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
