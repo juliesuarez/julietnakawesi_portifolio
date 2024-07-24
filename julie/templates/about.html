@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+
 <style>
     .transparent-bg {
         background-color: rgba(222, 226, 230, 0.8); /* Color #dee2e6 with reduced transparency */
@@ -11,11 +12,12 @@
     }
     
     .card {
-        width: 50%;
+        width: 100%; /* Make the card fill the width of the section */
         margin: 0 auto;
         position: relative;
         animation: floatAnimation 5s infinite alternate; /* Animation */
         border: 2px solid purple;
+        background-color: rgba(222, 226, 230, 0.8); /* Match the transparent background color */
     }
     
     @keyframes floatAnimation {
@@ -27,22 +29,29 @@
         }
     }
     
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
 </style>
-<div class="card" style="width:50%;">
+
+{% comment %} <div class="card"> {% endcomment %}
     <section id="about" class="about-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="{% static 'images/port.jpeg' %}" alt="About Me" class="img-fluid">
+                    <img src="{% static 'images/juliet.jpg' %}" alt="About Me" class="img-fluid">
                 </div>
                 <div class="col-md-8">
                     <h2 style="color:purple;">Get to Know Me</h2>
-                    <p>I'm <strong style="color:purple">Juliet Nakawesi</strong>, a passionate software engineer, project manager, data scientist, mentor, and innovator based in Uganda. With a background in computer science and a love for problem-solving, I strive to create impactful solutions that make a difference in people's lives.</p>
-                    <p>Driven by curiosity and a desire to learn, I'm constantly exploring new technologies and pushing the boundaries of what's possible. Whether it's developing cutting-edge software, mentoring aspiring technologists, or leading innovative projects, I'm always excited to take on new challenges and make a positive impact.</p>
+                    <p>I'm <strong style="color:purple">Juliet Nakawesi</strong>, a passionate software engineer, project manager,  Junior data scientist, mentor, and innovator based in Uganda. With a background in software engineering and a love for problem-solving, I strive to create impactful solutions that make a difference in people's lives.</p>
+                    <p>I am a motivated and results-driven individual with a proven ability to drive efficiency, deliver successful outcomes, and collaborate within cross-functional teams. Driven by curiosity and a desire to learn, I'm constantly exploring new technologies and pushing the boundaries of what's possible. Whether it's developing cutting-edge software, mentoring aspiring technologists, or leading innovative projects, I'm always excited to take on new challenges and make a positive impact.</p>
                 </div>
             </div>
         </div>
     </section>
-</div>
+{% comment %} </div> {% endcomment %}
+
 <br><br><br><br><br><br><br>
+
 {% endblock %}

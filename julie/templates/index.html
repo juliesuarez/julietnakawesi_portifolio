@@ -1,7 +1,24 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 
 <style>
+    /* Make sure the home-section takes full height */
+    .home-section {
+        background-image: url("{% static 'images/lad.jpg' %}"); /* Replace with the actual path to your background image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh; /* Ensure the section takes full viewport height */
+        position: relative;
+        padding: 50px 0; /* Adjust padding as needed */
+        color: white; /* Ensure text color contrasts with background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     .cta-button {
         display: inline-block;
         padding: 10px 20px;
@@ -16,21 +33,53 @@
     .cta-button:hover {
         background-color: darkpurple;
     }
-    </style>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <div class="home-section text-center">
-                <h1 style="color:black;">Welcome to Juliet Nakawesi's Portfolio</h1>
-                <div class="card mx-auto" id="intro-card" style="width:50%; border: 2px solid purple;">
-                    <div class="card-body" >
-                        <h5 class="card-title">Briefly</h5>
-                        <p class="card-text">Software Engineer, Data Scientist and Innovator</p>  
-                        <a href="{% url 'me' %}" class="cta-button">Explore More</a>
-                    </div>
+
+    /* Optional: Overlay to improve text readability */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+        z-index: 1; /* Place overlay above the background but below the content */
+    }
+
+    .content {
+        position: relative;
+        z-index: 2; /* Ensure the content is above the overlay */
+    }
+</style>
+
+<div class="home-section">
+    <!-- Optional: Overlay to improve text readability -->
+    <div class="overlay"></div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    {% comment %} <div class="card mx-auto" id="intro-card" style="width:50%; border: 2px solid purple;"> {% endcomment %}
+                        <div style="margin-bottom:500px;">
+                            <h1>Welcome to Juliet Nakawesi's Portfolio</h1>
+                            <h5 class="card-title">Briefly</h5>
+                            <p class="card-text">Software Engineer, Data Scientist and Innovator</p>  
+                            <a href="{% url 'me' %}" class="cta-button">Explore More</a>
+                        </div>
+                    {% comment %} </div> {% endcomment %}
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    // Example JavaScript: Adjust the overlay opacity based on scroll position for a parallax effect
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        const overlay = document.querySelector('.overlay');
+        const opacity = Math.min(scrollPosition / 500, 0.7); // Adjust the divisor and max opacity as needed
+        overlay.style.background = `rgba(0, 0, 0, ${opacity})`;
+    });
+</script>
+
 {% endblock %}
